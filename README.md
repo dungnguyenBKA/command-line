@@ -27,6 +27,11 @@ ggVG "+y
 
 ipconfig getifaddr en0
 
+# Git pull all sub dir
+
+ls | xargs -I{} git -C {} pull
+
+
 # Kill port
 
 npx kill-port 8080
