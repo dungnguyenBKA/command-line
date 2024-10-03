@@ -31,6 +31,7 @@ ipconfig getifaddr en0
 
 ls | xargs -I{} git -C {} pull
 
+find . -type d -exec sh -c 'cd "{}" && flutter pub get' \;
 
 # Kill port
 
