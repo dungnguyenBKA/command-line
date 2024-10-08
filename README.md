@@ -31,7 +31,7 @@ ipconfig getifaddr en0
 
 ls | xargs -I{} git -C {} pull
 
-find . -mindepth 1 -maxdepth 1 -type d -exec sh -c 'echo "Updating {}" && cd "{}" && git pull' \;
+find . -mindepth 1 -maxdepth 1 -type d -exec sh -c 'echo "\033[1;33mUpdating {}\033[0m" && cd "{}" && git status' \;
 
 # Kill port
 
